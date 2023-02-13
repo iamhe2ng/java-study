@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Product {
-    private Integer maxQuantity = 500;
+    private static final Integer MAX_QUANTITY = 500;
 
     private Integer prizeCount = 0;
 
@@ -15,7 +15,7 @@ public class Product {
     }
 
     public void prize(String userName) {
-        if (prizeCount >= maxQuantity) {
+        if (prizeCount >= MAX_QUANTITY) {
             return;
         }
 
