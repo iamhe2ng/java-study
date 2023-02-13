@@ -6,7 +6,7 @@ import java.util.List;
 public enum Product {
     INSTANCE;
 
-    private Integer maxQuantity = 500;
+    private static final Integer MAX_QUANTITY = 500;
 
     private Integer prizeCount = 0;
 
@@ -17,7 +17,7 @@ public enum Product {
     }
 
     public void prize(String userName) {
-        if (prizeCount >= maxQuantity) {
+        if (prizeCount >= MAX_QUANTITY) {
             return;
         }
 
@@ -29,6 +29,6 @@ public enum Product {
 
     public void print() {
         System.out.println("최종 당첨자 수  = " + prizeCount);
-        System.out.println("최종 당첨자 수  = " + prizeUser.size());
+        System.out.println("최종 당첨자 리스트 사이즈  = " + prizeUser.size());
     }
 }
